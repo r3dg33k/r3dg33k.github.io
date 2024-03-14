@@ -25,4 +25,4 @@ In my recent experience, an enterprise blocks upload sites like Google Drive, Dr
  ##9. [Hitachi]
  ##10. [Seagate] -->
 
- Feel free to contribute to this list by raising a git pull request.
+ Feel free to contribute to this list by raising a [git pull request](https://github.com/r3dg33k/NASConnList/blob/main/NASConnectors).
