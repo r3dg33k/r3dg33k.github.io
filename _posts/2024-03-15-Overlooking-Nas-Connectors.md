@@ -13,12 +13,12 @@ In my recent experience, an enterprise blocks upload sites like Google Drive, Dr
  By using URL filtering and DNS filtering, businesses can block these sites and ensure that their sensitive data is secure. Additionally, businesses should also consider implementing other security measures, such as dlp to further protect their data.
 
  NAS Connectors:
- 1. [Synology] (https://quickconnect.to/)
- 2. [Qnap] (https://www.myqnapcloud.com/)
+ 1. [Synology](https://quickconnect.to/)
+ 2. [Qnap](https://www.myqnapcloud.com/)
  3. [Asustor](https://www.ezconnect.to/)
- 4. [WD] (https://www.mycloud.com/#/)
- 5. [Drobo] (https://drobo-nas.fileflex.com/)
- 6. [Buffalo] (https://buffalonas.com/)
+ 4. [WD](https://www.mycloud.com/#/)
+ 5. [Drobo](https://drobo-nas.fileflex.com/)
+ 6. [Buffalo](https://buffalonas.com/)
  7. [TerraMaster]
  <!--  
  ##8. [NetApp]
