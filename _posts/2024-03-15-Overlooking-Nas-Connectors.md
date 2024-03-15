@@ -12,6 +12,8 @@ In my recent experience, an enterprise blocks upload sites like Google Drive, Dr
 
  By using URL filtering and DNS filtering, businesses can block these sites and ensure that their sensitive data is secure. Additionally, businesses should also consider implementing other security measures, such as dlp to further protect their data.
 
+ By implementing these measures, businesses can ensure that their data is secure and not at risk of being leaked or stolen. It's important for businesses to stay vigilant and continuously monitor their security measures to ensure that they are up-to-date and effective in preventing data leakage.
+
  NAS Connectors:
  1. [Synology](https://quickconnect.to/)
  2. [Qnap](https://www.myqnapcloud.com/)
@@ -19,7 +21,7 @@ In my recent experience, an enterprise blocks upload sites like Google Drive, Dr
  4. [WD](https://www.mycloud.com/#/)
  5. [Drobo](https://drobo-nas.fileflex.com/)
  6. [Buffalo](https://buffalonas.com/)
- 7. [TerraMaster]
+ 7. [TerraMaster](https://tnas.online/)
  <!--  
  ##8. [NetApp]
  ##9. [Hitachi]
