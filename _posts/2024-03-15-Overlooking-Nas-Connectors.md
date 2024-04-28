@@ -10,9 +10,9 @@ Enterprises use proxy servers to filter their traffic to enhance security, filte
 
 In my recent experience, an enterprise blocks upload sites like Google Drive, Dropbox, and Mega to prevent data leakage. However, they have overlooked certain sites that can still pose a threat, such as Synology Quick Connect, QNAP MyQNAPCloud, and other NAS connectors. These sites may not be as well-known as the big players in the cloud storage space, but they can still be used to upload and share files which expose a huge risk for data exfiltration.
 
- By using URL filtering and DNS filtering, businesses can block these sites and ensure that their sensitive data is secure. Additionally, businesses should also consider implementing other security measures, such as dlp to further protect their data.
+By using URL filtering and DNS filtering, businesses can block these sites and ensure that their sensitive data is secure. Additionally, businesses should also consider implementing other security measures, such as dlp to further protect their data.
 
- By implementing these measures, businesses can ensure that their data is secure and not at risk of being leaked or stolen. It's important for businesses to stay vigilant and continuously monitor their security measures to ensure that they are up-to-date and effective in preventing data leakage.
+By implementing these measures, businesses can ensure that their data is secure and not at risk of being leaked or stolen. It's important for businesses to stay vigilant and continuously monitor their security measures to ensure that they are up-to-date and effective in preventing data leakage.
 
  NAS Connectors:
  1. [Synology](https://quickconnect.to/)
