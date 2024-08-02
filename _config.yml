@@ -106,14 +106,11 @@ social_preview_image: # string, local or CORS resources
 toc: true
 
 comments:
-<<<<<<< HEAD
   active: disqus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
-=======
   # Global switch for the post comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: disqus
   # The provider options are as follows:
->>>>>>> upstream/main
   disqus:
     shortname: r3dg33k # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
