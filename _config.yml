@@ -21,7 +21,7 @@ tagline: Technologist, Infosec Guy Exploring the frontiers of cybersecurity and 
 description: My personal blog features in-depth reviews of InfoSec courses, walkthroughs of vulnerable machines, and exploring the evolving role of artificial intelligence in cybersecurity and delve into the unique threats and defenses surrounding AI security
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "http://r3dg33k.com"
+url: "https://r3dg33k.com"
 
 github:
   username: r3dg33k # change to your GitHub username
