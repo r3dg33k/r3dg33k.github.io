@@ -34,12 +34,13 @@ jobs:
       - name: Run Dastardly
         uses: PortSwigger/dastardly-github-action@main
         with:
-          target-url: https://r3dg33k.com  # Replace with your live site URL
+          target-url: https://r3dg33k.com
           output-filename: dastardly-report.xml
       - name: Upload Dastardly Report
         uses: actions/upload-artifact@v4
         with:
           name: dastardly-report
-          path: dastardly-report.html
+          path: dastardly-report.xml
+
 
 
