@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: main
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
@@ -45,6 +45,7 @@ jobs:
         with:
           name: dastardly-report
           path: dastardly-report.xml
+
 
 
 
