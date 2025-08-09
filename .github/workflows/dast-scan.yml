@@ -24,7 +24,7 @@ jobs:
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
         with:
-          name: zap-report
+          name: "zap-report"
           path: report_html.html
 
   dastardly-scan:
@@ -40,3 +40,4 @@ jobs:
         with:
           name: dastardly-report
           path: dastardly-report.html
+
