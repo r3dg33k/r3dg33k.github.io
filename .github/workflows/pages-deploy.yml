@@ -62,7 +62,8 @@ jobs:
           path: "_site${{ steps.pages.outputs.base_path }}"
   sast:
     runs-on: ubuntu-latest
-      steps:
+  
+    steps:
         - name: Checkout
           uses: actions/checkout@v4
 
