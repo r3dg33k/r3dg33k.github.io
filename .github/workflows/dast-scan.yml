@@ -10,7 +10,7 @@ on:
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-    name: Scan the webapplication
+    name: OWASP ZAP Scan
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,6 +21,15 @@ jobs:
         with:
           target: 'https://r3dg33k.com'
           cmd_options: '-a'
+          allow_issue_writing: false
+      - name: Upload ZAP Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: zap-report
+          path: |
+            report_html.html
+            report_md.md
+            report_json.json
 
   dastardly-scan:
     name: Dastardly Scan
@@ -36,6 +45,7 @@ jobs:
         with:
           name: dastardly-report
           path: dastardly-report.xml
+
 
 
 
