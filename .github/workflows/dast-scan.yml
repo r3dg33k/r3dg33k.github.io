@@ -1,9 +1,9 @@
 name: "DAST Scan"
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:   # Allow manual run from Actions tab
   workflow_run:
-    workflows: ["Build and Deploy"]
+    workflows: ["Build and Deploy"]  # Name of your main deploy workflow
     types:
       - completed
 
@@ -11,13 +11,16 @@ jobs:
   zap-scan:
     name: OWASP ZAP Baseline
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - name: Run ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.14.0
+      - name: ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.9.0
         with:
-          target: https://r3dg33k.com
-          fail_action: false
+          target: https://r3dg33k.com   # Replace with your live site URL
+          fail_action: false            # Don't block, just report
           cmd_options: '-a'
+          allow_issue_writing: false    # Prevents posting issues to GitHub
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
         with:
@@ -31,10 +34,9 @@ jobs:
       - name: Run Dastardly
         uses: PortSwigger/dastardly-github-action@main
         with:
-          target-url: https://r3dg33k.com
-          output-filename: dastardly-report.xml
+          target-url: https://r3dg33k.com  # Replace with your live site URL
       - name: Upload Dastardly Report
         uses: actions/upload-artifact@v4
         with:
           name: dastardly-report
-          path: dastardly-report.xml
+          path: dastardly-report.html
