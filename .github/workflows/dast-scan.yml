@@ -12,19 +12,17 @@ jobs:
     name: OWASP ZAP Baseline
     runs-on: ubuntu-latest
     steps:
-      - name: ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.9.0
+      - name: Run ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.14.0
         with:
           target: https://r3dg33k.com
           fail_action: false
           cmd_options: '-a'
-          format: html
-          report_file: zap-report.html
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
         with:
           name: zap-report
-          path: zap-report.html
+          path: report_html.html
 
   dastardly-scan:
     name: Dastardly Scan
@@ -34,9 +32,9 @@ jobs:
         uses: PortSwigger/dastardly-github-action@main
         with:
           target-url: https://r3dg33k.com
-          output-file: dastardly-report.html
+          output-filename: dastardly-report.xml
       - name: Upload Dastardly Report
         uses: actions/upload-artifact@v4
         with:
           name: dastardly-report
-          path: dastardly-report.html
+          path: dastardly-report.xml
