@@ -1,9 +1,9 @@
 name: "DAST Scan"
 
 on:
-  workflow_dispatch:   # Allow manual run from Actions tab
+  workflow_dispatch:
   workflow_run:
-    workflows: ["Build and Deploy"]  # Name of your main deploy workflow
+    workflows: ["Build and Deploy"]
     types:
       - completed
 
@@ -15,9 +15,11 @@ jobs:
       - name: ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.9.0
         with:
-          target: https://r3dg33k.com   # Replace with your live site URL
-          fail_action: false   # Don't block, just report
+          target: https://r3dg33k.com
+          fail_action: false
           cmd_options: '-a'
+          format: html
+          report_file: zap-report.html
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
         with:
@@ -31,7 +33,8 @@ jobs:
       - name: Run Dastardly
         uses: PortSwigger/dastardly-github-action@main
         with:
-          target-url: https://r3dg33k.com  # Replace with your live site URL
+          target-url: https://r3dg33k.com
+          output-file: dastardly-report.html
       - name: Upload Dastardly Report
         uses: actions/upload-artifact@v4
         with:
