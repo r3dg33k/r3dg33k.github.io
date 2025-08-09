@@ -60,13 +60,29 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
+  sast:
+    runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Install Ruby
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: 3.3
+
+        - name: Install Brakeman
+          run: gem install brakeman
+
+        - name: Run Brakeman Scan
+          run: brakeman --no-exit-on-warn --exit-on-error
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build, sast]
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
