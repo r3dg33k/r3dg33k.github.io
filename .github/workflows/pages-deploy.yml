@@ -49,22 +49,26 @@ jobs:
     runs-on: ubuntu-latest
     needs: codeql
     steps:
-        - name: Checkout
-          uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-        - name: Setup Ruby
-          uses: ruby/setup-ruby@v1
-          with:
-            ruby-version: 3.3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
 
-        - name: Install bundler-audit
-          run: gem install bundler-audit
+      - name: Install dependencies (generate Gemfile.lock)
+        run: bundle install
 
-        - name: Update vulnerability database
-          run: bundle audit update
+      - name: Install bundler-audit
+        run: gem install bundler-audit
 
-        - name: Run bundler-audit
-          run: bundle audit check --verbose
+      - name: Update vulnerability database
+        run: bundle audit update
+
+      - name: Run bundler-audit
+        run: bundle audit check --verbose
+
   build:
     runs-on: ubuntu-latest
     needs: [codeql, dependency-check]
